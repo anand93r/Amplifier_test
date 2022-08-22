@@ -1,11 +1,16 @@
 const express = require("express");
 const cors = require("cors");
+const path=require('path');
+const signupRouter=require('./src/routes/signuproute');
 const Jobdata = require("./src/model/JobsData");
+
 
 const app = new express();
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use('/signup',signupRouter);
 
 // API
 app.get('/jobs', function (req, res) {

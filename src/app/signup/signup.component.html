@@ -2,65 +2,12 @@
     <div class="row">
         <div class="col-md-6">
             <img src="assets/loginbg.png" alt="">
-            <!--div class="card">
-                <div class="text-center">
-                    
-                    <h1>Sign Up</h1>
-                   
-                </div>
-                
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputName1" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1">
-                     </div>
-
-                     <div class="mb-3">
-                        <label for="exampleInputName2" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="exampleInputName2">
-                        
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleInputNumber" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="exampleInputNumber">
-                        
-                      </div>
-
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <label class="input-group-text" for="inputGroupSelect01">Signup As</label>
-                        </div>
-                        <select class="custom-select" id="inputGroupSelect01">
-                          <option selected>Choose...</option>
-                          <option value="1"><a routerLink="">Alumni</a></option>
-                          <option value="2"><a routerLink="">Employer</a></option>
-                          <option value="3"><a routerLink="">Faculty</a></option>
-                        </select>
-                      </div>
-                    
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">  
-                      </div> 
-                
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                        
-                      </div>
-                    <button type="submit" class="btn btn-primary" >SIGN UP</button>
-                  </form>
-                      
-            </div>
-        </div>
-    </div>
-</div-->
 <div class="container">
   <div class="row">
   <div class="col-md-6 offset-md-3">
   <h3>Register here</h3>
 
-  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="registerForm" (ngSubmit)="signUp()">
   <div class="form-group">
   <label>First Name</label>
   <input type="text" formControlName='firstName'class="form-control" [ngClass]="{ 'is-invalid': submitted && registerForm.controls['firstName'].errors }" />
